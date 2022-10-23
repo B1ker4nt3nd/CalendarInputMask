@@ -1,0 +1,21 @@
+<div class="flex m-4">
+  <p-inputMask
+    [ngModel]="stringInputValue"
+    (ngModelChange)="onChangeInputValue($event)"
+    mask="9999.99.99"
+    (onFocus)="onInputFocus($event)"
+    (onComplete)="onInputComplete($event)"
+    #dateInput
+  ></p-inputMask>
+  <p-overlayPanel #op styleClass="date-overlay-panel">
+    <ng-template pTemplate>
+      <p-calendar
+        [ngModel]="dateSelectorValue"
+        (ngModelChange)="onChangeDateSelectorValue($event)"
+        [inline]="true"
+      ></p-calendar>
+    </ng-template>
+  </p-overlayPanel>
+  number: {{ value }} string: {{ stringInputValue }} date:
+  {{ dateSelectorValue | json }}
+</div>
