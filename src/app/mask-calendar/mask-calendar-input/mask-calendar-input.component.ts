@@ -34,7 +34,6 @@ export class MaskCalendarInputComponent implements OnInit {
     const newValue: Date | undefined = undefined;
     const [year, month, day] = value.split('.');
     const newDate = this.getValidDateFromStrings(year, month, day);
-    console.log(newDate);
     this.value = newDate?.getTime();
     this.dateSelectorValue = newDate;
   }
@@ -45,17 +44,15 @@ export class MaskCalendarInputComponent implements OnInit {
     day: string
   ): Date | undefined {
     if (
-      !(
-        year &&
-        month &&
-        day &&
-        +year > 0 &&
-        +year < 4000 &&
-        +month > -1 &&
-        +month > 12 &&
-        +day > 0 &&
-        +day < 31
-      )
+      !!year &&
+      !!month &&
+      !!day &&
+      +year > 0 &&
+      +year < 4000 &&
+      +month > -1 &&
+      +month > 12 &&
+      +day > 0 &&
+      +day < 31
     ) {
       return undefined;
     }
