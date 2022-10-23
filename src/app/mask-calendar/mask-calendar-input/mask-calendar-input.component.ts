@@ -73,6 +73,10 @@ export class MaskCalendarInputComponent implements OnInit {
     this.hideOP();
   }
 
+  public get showValueAsDate(): string {
+    return this.value ? JSON.stringify(new Date(this.value)) : 'NO value';
+  }
+
   private hideOP() {
     setTimeout(() => {
       this.op.hide();

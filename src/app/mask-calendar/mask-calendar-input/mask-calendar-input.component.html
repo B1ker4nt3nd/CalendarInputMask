@@ -16,6 +16,10 @@
       ></p-calendar>
     </ng-template>
   </p-overlayPanel>
-  number: {{ value }} string: {{ stringInputValue }} date:
-  {{ dateSelectorValue | json }}
+  <div>
+    <span>number: {{ value }} </span>
+    <span>string: {{ stringInputValue }} </span>
+    <span>date selector: {{ dateSelectorValue | json }} </span>
+    <span>value to date: {{ showValueAsDate }} </span>
+  </div>
 </div>
