@@ -6,9 +6,15 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'primeng/calendar';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { MaskCalendarInputSecondComponent } from './mask-calendar-input-second/mask-calendar-input-second.component';
+import { CalendarWithMaskDirective } from './directive/calendar-with-mask.directive';
 
 @NgModule({
-  declarations: [MaskCalendarInputComponent],
+  declarations: [
+    MaskCalendarInputComponent,
+    MaskCalendarInputSecondComponent,
+    CalendarWithMaskDirective,
+  ],
   imports: [
     CommonModule,
     MaskCalendarRoutingModule,

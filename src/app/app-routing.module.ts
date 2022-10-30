@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { InstructionPageComponent } from './instruction-page/instruction-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'components/mask-calendar-input', pathMatch: 'full' },
+  { path: '', component: InstructionPageComponent },
   {
     path: 'components',
     loadChildren: () =>
